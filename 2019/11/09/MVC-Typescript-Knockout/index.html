@@ -14,11 +14,11 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="废话前段时间要把一个很老的 win form（windows CE）程序重写成移动端，项目虽然难度不大，但逻辑步骤较为繁杂，如果用纯js写，不知道要走多少坑，好在微软又搞了个ts。至于knockout，公司一直在用，也够用，如果用angular，vue感觉有点牛刀小用。 搭建项目例子可以在我的GitHub上找到,以下是具体的搭建流程。 首先用vs创建一个 asp.net mvc 的项目， 然后在S">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;1.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;2.png">
-<meta property="og:updated_time" content="2019-11-15T15:08:54.284Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;2.png">
+<meta property="og:updated_time" content="2019-11-15T15:11:12.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;1.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -91,9 +91,9 @@
 <h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><p><a href="https://github.com/baalismlin/KO-TS-MVC" target="_blank" rel="noopener">项目例子</a>可以在我的GitHub上找到,以下是具体的搭建流程。</p>
 <p>首先用vs创建一个 <code>asp.net mvc</code> 的项目，</p>
 <p>然后在Scripts目录下创建一个新目录TypeScript，我们的ts文件就写在这。</p>
-<p><img src="../images/MVCTypescriptKnockout/1.png" alt="目录结构"></p>
+<p><img src="/images/MVCTypescriptKnockout/1.png" alt="目录结构"></p>
 <p>tsconfig里的 <code>moduleResolution</code> 要设置为 <code>node</code>，<code>types</code> 要添加 <code>knockout</code>， 如果要用 <code>jquery</code> 就添加 <code>jquery</code>。</p>
-<p><img src="../images/MVCTypescriptKnockout/2.png" alt="tsconfig"></p>
+<p><img src="/images/MVCTypescriptKnockout/2.png" alt="tsconfig"></p>
 <p>在TypeScript目录下运行 <code>npm i</code> 安装依赖包</p>
 <p>在ts文件里引用</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> $ <span class="keyword">from</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> ko <span class="keyword">from</span> <span class="string">"knockout"</span>;</span><br></pre></td></tr></table></figure>
@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/09/MVC-Typescript-Knockout/" data-id="ck30a2ys200001dzx8eyjbz99" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/09/MVC-Typescript-Knockout/" data-id="ck30a3zx600003szx6bhy391b" class="article-share-link">Share</a>
       
       
     </footer>
