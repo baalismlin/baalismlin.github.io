@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ASP.NET MVC + Typescript + Knockout | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="废话前段时间要把一个很老的 win form（windows CE）程序重写成移动端，项目虽然难度不大，但逻辑步骤较为繁杂，如果用纯js写，不知道要走多少坑，好在微软又搞了个ts。至于knockout，公司一直在用，也够用，如果用angular，vue感觉有点牛刀小用。 搭建项目例子可以在我的GitHub上找到,以下是具体的搭建流程。 首先用vs创建一个 asp.net mvc 的项目， 然后在S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASP.NET MVC + Typescript + Knockout">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;MVC-Typescript-Knockout&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="废话前段时间要把一个很老的 win form（windows CE）程序重写成移动端，项目虽然难度不大，但逻辑步骤较为繁杂，如果用纯js写，不知道要走多少坑，好在微软又搞了个ts。至于knockout，公司一直在用，也够用，如果用angular，vue感觉有点牛刀小用。 搭建项目例子可以在我的GitHub上找到,以下是具体的搭建流程。 首先用vs创建一个 asp.net mvc 的项目， 然后在S">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;2.png">
+<meta property="og:updated_time" content="2019-11-15T15:08:54.284Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;images&#x2F;MVCTypescriptKnockout&#x2F;1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MVC-Typescript-Knockout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/09/MVC-Typescript-Knockout/" class="article-date">
+  <time datetime="2019-11-09T14:29:59.000Z" itemprop="datePublished">2019-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ASP.NET MVC + Typescript + Knockout
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h2><p>前段时间要把一个很老的 win form（windows CE）程序重写成移动端，项目虽然难度不大，但逻辑步骤较为繁杂，如果用纯js写，不知道要走多少坑，好在微软又搞了个ts。至于knockout，公司一直在用，也够用，如果用angular，vue感觉有点牛刀小用。</p>
+<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><p><a href="https://github.com/baalismlin/KO-TS-MVC" target="_blank" rel="noopener">项目例子</a>可以在我的GitHub上找到,以下是具体的搭建流程。</p>
+<p>首先用vs创建一个 <code>asp.net mvc</code> 的项目，</p>
+<p>然后在Scripts目录下创建一个新目录TypeScript，我们的ts文件就写在这。</p>
+<p><img src="../images/MVCTypescriptKnockout/1.png" alt="目录结构"></p>
+<p>tsconfig里的 <code>moduleResolution</code> 要设置为 <code>node</code>，<code>types</code> 要添加 <code>knockout</code>， 如果要用 <code>jquery</code> 就添加 <code>jquery</code>。</p>
+<p><img src="../images/MVCTypescriptKnockout/2.png" alt="tsconfig"></p>
+<p>在TypeScript目录下运行 <code>npm i</code> 安装依赖包</p>
+<p>在ts文件里引用</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> $ <span class="keyword">from</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> ko <span class="keyword">from</span> <span class="string">"knockout"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>接下来在模板页面 <code>_Layout</code> 里引入 <code>requirejs</code><br>我这里用Razor注入了js，也可以直接引入js。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(<span class="string">"~/bundles/requirejs"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我们先确保Scripts目录下存在knockout-3.5.1.js，jquery-3.3.1.js</p>
+<p>再配置require</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.config(&#123;</span><br><span class="line">    baseUrl: <span class="string">"/Scripts"</span>,</span><br><span class="line">    paths: &#123;</span><br><span class="line">        <span class="string">'jquery'</span>: <span class="string">''</span>,</span><br><span class="line">        <span class="string">'knockout'</span>: <span class="string">'knockout-3.5.1'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>最后我们在具体的页面里用require调用编译好的view-model文件就好</p>
+<p>比如在Index页面的<code>scripts section</code>里</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">"TypeScript/built/ViewModels/Home/HomeIndex"</span>]);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/09/MVC-Typescript-Knockout/" data-id="ck30a2ys200001dzx8eyjbz99" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/09/Markdown-Grammar/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Markdown Grammar
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/09/Markdown-Grammar/">Markdown Grammar</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/MVC-Typescript-Knockout/">ASP.NET MVC + Typescript + Knockout</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

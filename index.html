@@ -93,7 +93,7 @@
 [1]:https://www.google.com &quot;Google&quot;
 [Bing]:https://www.bing.com &quot;Bing&quot;
 [3]:https://www.baidu.com</code></pre><p>搜索网站<a href="https://www.google.com" target="_blank" rel="noopener" title="Google">Google</a>、<a href="https://www.bing.com" target="_blank" rel="noopener" title="Bing">Bing</a>以及<a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
-<pre><code>&lt;http:localhost:8080&gt; &lt;baalismlin@gmail.com&gt;</code></pre><p><a href="http:localhost:8080" target="_blank" rel="noopener">http:localhost:8080</a> <a href="mailto:&#98;&#x61;&#x61;&#x6c;&#x69;&#115;&#109;&#x6c;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#98;&#x61;&#x61;&#x6c;&#x69;&#115;&#109;&#x6c;&#105;&#110;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<pre><code>&lt;http:localhost:8080&gt; &lt;baalismlin@gmail.com&gt;</code></pre><p><a href="http:localhost:8080" target="_blank" rel="noopener">http:localhost:8080</a> <a href="mailto:&#98;&#x61;&#97;&#108;&#x69;&#x73;&#109;&#108;&#x69;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#98;&#x61;&#97;&#108;&#x69;&#x73;&#109;&#108;&#x69;&#110;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a></p>
 <p>跳转到<a href="#233">二级标题</a></p>
 <p>无序列表</p>
 <pre><code>* 苹果
@@ -154,7 +154,7 @@ HeNi|FM</code></pre><p>Table<br>|name|sex<br>-|-:<br>feng|F<br>lin|M<br>HeNi|FM<
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/09/Markdown-Grammar/" data-id="ck2rp2q8e0001f3zx9xkg6uqc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/09/Markdown-Grammar/" data-id="ck30a2ys700011dzxhhc3fjnv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -164,9 +164,9 @@ HeNi|FM</code></pre><p>Table<br>|name|sex<br>-|-:<br>feng|F<br>lin|M<br>HeNi|FM<
 
 
   
-    <article id="post-AMD-Typescript-Knockout" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-MVC-Typescript-Knockout" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/09/AMD-Typescript-Knockout/" class="article-date">
+    <a href="/2019/11/09/MVC-Typescript-Knockout/" class="article-date">
   <time datetime="2019-11-09T14:29:59.000Z" itemprop="datePublished">2019-11-09</time>
 </a>
     
@@ -178,7 +178,7 @@ HeNi|FM</code></pre><p>Table<br>|name|sex<br>-|-:<br>feng|F<br>lin|M<br>HeNi|FM<
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/09/AMD-Typescript-Knockout/">AMD + Typescript + Knockout</a>
+      <a class="article-title" href="/2019/11/09/MVC-Typescript-Knockout/">ASP.NET MVC + Typescript + Knockout</a>
     </h1>
   
 
@@ -186,11 +186,32 @@ HeNi|FM</code></pre><p>Table<br>|name|sex<br>-|-:<br>feng|F<br>lin|M<br>HeNi|FM<
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="废话："><a href="#废话：" class="headerlink" title="废话："></a>废话：</h2><h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2>
+        <h2 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h2><p>前段时间要把一个很老的 win form（windows CE）程序重写成移动端，项目虽然难度不大，但逻辑步骤较为繁杂，如果用纯js写，不知道要走多少坑，好在微软又搞了个ts。至于knockout，公司一直在用，也够用，如果用angular，vue感觉有点牛刀小用。</p>
+<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><p><a href="https://github.com/baalismlin/KO-TS-MVC" target="_blank" rel="noopener">项目例子</a>可以在我的GitHub上找到,以下是具体的搭建流程。</p>
+<p>首先用vs创建一个 <code>asp.net mvc</code> 的项目，</p>
+<p>然后在Scripts目录下创建一个新目录TypeScript，我们的ts文件就写在这。</p>
+<p><img src="../images/MVCTypescriptKnockout/1.png" alt="目录结构"></p>
+<p>tsconfig里的 <code>moduleResolution</code> 要设置为 <code>node</code>，<code>types</code> 要添加 <code>knockout</code>， 如果要用 <code>jquery</code> 就添加 <code>jquery</code>。</p>
+<p><img src="../images/MVCTypescriptKnockout/2.png" alt="tsconfig"></p>
+<p>在TypeScript目录下运行 <code>npm i</code> 安装依赖包</p>
+<p>在ts文件里引用</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> $ <span class="keyword">from</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> ko <span class="keyword">from</span> <span class="string">"knockout"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>接下来在模板页面 <code>_Layout</code> 里引入 <code>requirejs</code><br>我这里用Razor注入了js，也可以直接引入js。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(<span class="string">"~/bundles/requirejs"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我们先确保Scripts目录下存在knockout-3.5.1.js，jquery-3.3.1.js</p>
+<p>再配置require</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.config(&#123;</span><br><span class="line">    baseUrl: <span class="string">"/Scripts"</span>,</span><br><span class="line">    paths: &#123;</span><br><span class="line">        <span class="string">'jquery'</span>: <span class="string">''</span>,</span><br><span class="line">        <span class="string">'knockout'</span>: <span class="string">'knockout-3.5.1'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>最后我们在具体的页面里用require调用编译好的view-model文件就好</p>
+<p>比如在Index页面的<code>scripts section</code>里</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">"TypeScript/built/ViewModels/Home/HomeIndex"</span>]);</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/09/AMD-Typescript-Knockout/" data-id="ck2yrg17h0000qizx6ia23zkb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/09/MVC-Typescript-Knockout/" data-id="ck30a2ys200001dzx8eyjbz99" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +260,7 @@ HeNi|FM</code></pre><p>Table<br>|name|sex<br>-|-:<br>feng|F<br>lin|M<br>HeNi|FM<
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/09/hello-world/" data-id="ck2rp2q8g0002f3zx87t9h7xg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/09/hello-world/" data-id="ck30a2ys900021dzx14w529qr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -284,7 +305,7 @@ HeNi|FM</code></pre><p>Table<br>|name|sex<br>-|-:<br>feng|F<br>lin|M<br>HeNi|FM<
           </li>
         
           <li>
-            <a href="/2019/11/09/AMD-Typescript-Knockout/">AMD + Typescript + Knockout</a>
+            <a href="/2019/11/09/MVC-Typescript-Knockout/">ASP.NET MVC + Typescript + Knockout</a>
           </li>
         
           <li>
