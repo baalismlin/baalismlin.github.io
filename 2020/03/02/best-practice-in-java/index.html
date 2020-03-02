@@ -5,17 +5,17 @@
   
 
   
-  <title>Hello World | 林峰的博客</title>
+  <title>best-practice-in-java | 林峰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="Java,java,github,blog">
+  <meta name="description" content="java最佳实践(更新中…) Do not design objects is cramming too much functionality into one object. The goal of the client programmer is to collect a toolbox full of classes to use for rapid application developm">
+<meta name="keywords" content="Java基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="best-practice-in-java">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;02&#x2F;best-practice-in-java&#x2F;index.html">
 <meta property="og:site_name" content="林峰的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="java最佳实践(更新中…) Do not design objects is cramming too much functionality into one object. The goal of the client programmer is to collect a toolbox full of classes to use for rapid application developm">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-11-09T13:16:25.215Z">
+<meta property="og:updated_time" content="2020-03-02T13:16:01.373Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="林峰的博客" type="application/atom+xml">
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-best-practice-in-java" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/09/hello-world/" class="article-date">
-  <time datetime="2019-11-09T13:16:25.215Z" itemprop="datePublished">2019-11-09</time>
+    <a href="/2020/03/02/best-practice-in-java/" class="article-date">
+  <time datetime="2020-03-02T12:37:21.000Z" itemprop="datePublished">2020-03-02</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      best-practice-in-java
     </h1>
   
 
@@ -89,41 +89,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="java最佳实践-更新中…"><a href="#java最佳实践-更新中…" class="headerlink" title="java最佳实践(更新中…)"></a>java最佳实践(更新中…)</h2><ul>
+<li>Do not design objects is cramming too much functionality into one object.</li>
+<li>The goal of the client programmer is to collect a toolbox full of classes to use for rapid application development.</li>
+<li>The goal of the class creator is to build a class that exposes only what’s necessary to the client programmer and keeps everything else hidden.</li>
+<li>Only use <strong>final</strong> as a design decision, and not as an attempt to improve performance.</li>
+<li>Polymorphism is an important technique for the programmer to “separate the things that change from the things that stay the same.”</li>
+<li>You’ll generally make all fields <strong>private</strong> and so you won’t access them directly, but only as side effects of calling methods.</li>
+<li>The order of disposal should be the reverse of the order of initialization.</li>
+<li>The only safe methods to call inside a constructor are thoese that are <strong>final</strong> in the base class.</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/09/hello-world/" data-id="ck7ahs7oz0002v9zx1mze2hfj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/02/best-practice-in-java/" data-id="ck7ahs7p10003v9zxct3b5eks" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/11/09/MVC-Typescript-Knockout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          ASP.NET MVC + Typescript + Knockout
-        
-      </div>
-    </a>
   
+    <a href="/2020/03/02/thinking-in-java/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">thinking-in-java</div>
+    </a>
   
 </nav>
 

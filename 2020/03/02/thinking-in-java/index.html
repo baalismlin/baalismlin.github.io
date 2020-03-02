@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>thinking-in-java | 林峰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java 编程思想(第四版) 摘记(更新中…)面向对象和面向过程开发的主要区别面向过程:从计算机数据结构的角度出发想怎么解决问题 面向对象:从问题的角度出发向怎么解决问题  OOP allows you to describe the problem in terms of the problems, rather than in terms of the computer where the s">
+<meta name="keywords" content="Java基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="thinking-in-java">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;02&#x2F;thinking-in-java&#x2F;index.html">
+<meta property="og:site_name" content="林峰的博客">
+<meta property="og:description" content="Java 编程思想(第四版) 摘记(更新中…)面向对象和面向过程开发的主要区别面向过程:从计算机数据结构的角度出发想怎么解决问题 面向对象:从问题的角度出发向怎么解决问题  OOP allows you to describe the problem in terms of the problems, rather than in terms of the computer where the s">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2020-03-02T13:16:20.419Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="林峰的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">林峰的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">源于热爱</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-thinking-in-java" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/02/thinking-in-java/" class="article-date">
+  <time datetime="2020-03-02T10:05:58.000Z" itemprop="datePublished">2020-03-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      thinking-in-java
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java-编程思想-第四版-摘记-更新中…"><a href="#Java-编程思想-第四版-摘记-更新中…" class="headerlink" title="Java 编程思想(第四版) 摘记(更新中…)"></a>Java 编程思想(第四版) 摘记(更新中…)</h2><h2 id="面向对象和面向过程开发的主要区别"><a href="#面向对象和面向过程开发的主要区别" class="headerlink" title="面向对象和面向过程开发的主要区别"></a>面向对象和面向过程开发的主要区别</h2><p>面向过程:从计算机数据结构的角度出发想怎么解决问题</p>
+<p>面向对象:从问题的角度出发向怎么解决问题</p>
+<blockquote>
+<p>OOP allows you to describe the problem in terms of the problems, rather than in terms of the computer where the solution will run.</p>
+</blockquote>
+<blockquote>
+<p>The difference is that a programmer defines a class to fit a problem rather than being forced to use an existing data type that was designed to represent a unit of storage in a machine.</p>
+</blockquote>
+<blockquote>
+<p>One of the challenges of object-orient programming is to create a one-to-one mapping between the elements in the problem space and objects in the solution space.</p>
+</blockquote>
+<h2 id="面向对象语言的特点"><a href="#面向对象语言的特点" class="headerlink" title="面向对象语言的特点"></a>面向对象语言的特点</h2><ul>
+<li>Everything is an object.</li>
+<li>A program is a bunch of objects telling each other what to do by sending messages.</li>
+<li>Each object has its own memeory made up of other objects.</li>
+<li>Every object has a type.</li>
+<li>All objects of a particular type can receive the messages.</li>
+</ul>
+<h2 id="Java多态的实现"><a href="#Java多态的实现" class="headerlink" title="Java多态的实现"></a>Java多态的实现</h2><p>动态绑定</p>
+<blockquote>
+<p>The solution is called late binding, which means that the binding occurs at run time, based on the type of object.Late binding is also called dynamic binding or runtime binding.</p>
+</blockquote>
+<h2 id="哪些方法绑定不是动态的"><a href="#哪些方法绑定不是动态的" class="headerlink" title="哪些方法绑定不是动态的"></a>哪些方法绑定不是动态的</h2><p>static, private, final, constructors</p>
+<blockquote>
+<p>All method binding in Java uses late binding unless the method is static or final (<strong>private</strong> methods are implicitly <strong>final</strong>).</p>
+</blockquote>
+<blockquote>
+<p>Constructors are actually <strong>static</strong> methods, but the <strong>static</strong> declaration is implicit.</p>
+</blockquote>
+<h2 id="Java类的结构"><a href="#Java类的结构" class="headerlink" title="Java类的结构"></a>Java类的结构</h2><p>The singly rooted hierarchy</p>
+<h2 id="field-是多态的吗"><a href="#field-是多态的吗" class="headerlink" title="field 是多态的吗"></a>field 是多态的吗</h2><p>不是</p>
+<blockquote>
+<p>Any field accesses are resolved by the compiler, and are thus not polymorphic.</p>
+</blockquote>
+<h2 id="构造函数初始化过程"><a href="#构造函数初始化过程" class="headerlink" title="构造函数初始化过程"></a>构造函数初始化过程</h2><ol>
+<li>The storage allocated for the object is initialized to binary zero(0 for numbers, false for boolean, <strong>null</strong> for object).</li>
+<li>The base-class constructors are called. This step is repeated recursively such that the root of the hierarchy is constructed first.</li>
+<li>Member initializers are called in the order of declaration.</li>
+<li>The body of the derived-class constructor is called.</li>
+</ol>
+<p>?? 初始化块需要验证??</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/02/thinking-in-java/" data-id="ck7ahs7p70007v9zx3uxbeedi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/03/02/best-practice-in-java/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          best-practice-in-java
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/16/leetcode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">leetcode</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mall-learning-%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/" rel="tag">mall learning 踩坑日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%B7%E9%A2%98/" rel="tag">刷题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">Java基础</a> <a href="/tags/mall-learning-%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/" style="font-size: 10px;">mall learning 踩坑日记</a> <a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 10px;">刷题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/02/best-practice-in-java/">best-practice-in-java</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/02/thinking-in-java/">thinking-in-java</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/16/leetcode/">leetcode</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/26/mall-learning/">mall-learning</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/Markdown-Grammar/">Markdown Grammar</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 林峰<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
